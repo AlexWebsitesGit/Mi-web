@@ -1,18 +1,202 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi primera web en GitHub Pages</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vintage Café Arenys · Café de puerto en Arenys de Mar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>¡Hola, mundo! 👋</h1>
-  <p>Esta es mi primera página publicada con GitHub Pages.</p>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a href="#inicio" class="brand">Vintage Café <span>Arenys</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="mainNav">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#menu">Menú</a>
+        <a href="#horario">Horario</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
-  <button id="miBoton">Haz clic aquí</button>
-  <p id="mensaje"></p>
+  <main>
+
+    <!-- HERO: estilo postal antigua -->
+    <section id="inicio" class="hero">
+      <div class="postcard reveal">
+        <div class="postcard__border">
+          <p class="eyebrow">Café · Vermut · Costa Catalana desde 1962</p>
+          <h1>Vintage Café<br>Arenys</h1>
+          <p class="hero__text">
+            Café recién molido, pan de horno de leña y una terraza que mira al mar.
+            El mismo rincón de siempre, para quien busca sentarse despacio.
+          </p>
+          <div class="hero__actions">
+            <a href="#menu" class="btn btn--primary">Ver el menú</a>
+            <a href="#horario" class="btn btn--ghost">Cómo llegar</a>
+          </div>
+        </div>
+
+        <!-- Sello postal decorativo -->
+        <svg class="stamp" viewBox="0 0 160 160" aria-hidden="true">
+          <defs>
+            <path id="stampCircle" d="M 80,80 m -62,0 a 62,62 0 1,1 124,0 a 62,62 0 1,1 -124,0" />
+          </defs>
+          <circle cx="80" cy="80" r="74" class="stamp__outer" />
+          <circle cx="80" cy="80" r="54" class="stamp__inner" />
+          <text class="stamp__text">
+            <textPath href="#stampCircle" startOffset="2%">
+              ARENYS DE MAR • COSTA CATALANA •
+            </textPath>
+          </text>
+          <text x="80" y="86" class="stamp__center">1962</text>
+        </svg>
+
+        <span class="coffee-stain" aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section id="nosotros" class="about">
+      <div class="about__text reveal">
+        <p class="eyebrow">Nuestra historia</p>
+        <h2>Una casa con memoria de sal</h2>
+        <p>
+          Antes de ser café, esta casa fue de un patrón de pesca. Quedan las vigas,
+          la puerta de doble hoja y las sillas de enea que se reparan cada invierno
+          en vez de cambiarse. Servimos el vermut a mediodía, como se ha hecho
+          siempre en el pueblo, y el café se muele en la sala para que se note.
+        </p>
+        <p>
+          No hay prisa aquí. Las tostadas se hacen al pedirlas, la crema catalana
+          se quema en el momento y las conversaciones largas están permitidas
+          en cualquier mesa.
+        </p>
+      </div>
+      <div class="about__art reveal">
+        <svg viewBox="0 0 400 300" class="boat-art" aria-hidden="true">
+          <path d="M0,220 Q50,200 100,220 T200,220 T300,220 T400,220" class="wave wave--1"/>
+          <path d="M0,240 Q50,225 100,240 T200,240 T300,240 T400,240" class="wave wave--2"/>
+          <path d="M0,260 Q50,248 100,260 T200,260 T300,260 T400,260" class="wave wave--3"/>
+          <g class="boat">
+            <path d="M150,205 L250,205 L235,225 L165,225 Z" />
+            <line x1="200" y1="205" x2="200" y2="150" />
+            <path d="M200,155 L235,200 L200,200 Z" />
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu" class="menu">
+      <p class="eyebrow center">La carta</p>
+      <h2 class="center">Lo de siempre, bien hecho</h2>
+
+      <div class="menu__grid">
+
+        <article class="menu-card reveal">
+          <p class="menu-card__label">Cafés &amp; vermuts</p>
+          <ul>
+            <li><span>Cortado de puerto</span><b>1,80&nbsp;€</b></li>
+            <li><span>Vermut de la casa</span><b>3,20&nbsp;€</b></li>
+            <li><span>Carajillo Arenys</span><b>2,50&nbsp;€</b></li>
+          </ul>
+        </article>
+
+        <article class="menu-card reveal">
+          <p class="menu-card__label">Para picar</p>
+          <ul>
+            <li><span>Tostada, tomate y anchoa</span><b>4,50&nbsp;€</b></li>
+            <li><span>Bikini de jamón y queso</span><b>3,80&nbsp;€</b></li>
+            <li><span>Ensaimada rellena</span><b>2,90&nbsp;€</b></li>
+          </ul>
+        </article>
+
+        <article class="menu-card reveal">
+          <p class="menu-card__label">Dulces de la abuela</p>
+          <ul>
+            <li><span>Crema catalana</span><b>3,50&nbsp;€</b></li>
+            <li><span>Flan de café</span><b>3,00&nbsp;€</b></li>
+            <li><span>Bizcocho de limón</span><b>2,70&nbsp;€</b></li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- HORARIO -->
+    <section id="horario" class="hours">
+      <div class="hours__table reveal">
+        <p class="eyebrow">Horario</p>
+        <h2>Te esperamos</h2>
+        <table>
+          <tr><td>Lunes a viernes</td><td>7:30 – 20:00</td></tr>
+          <tr><td>Sábados</td><td>8:00 – 21:00</td></tr>
+          <tr><td>Domingos</td><td>8:00 – 14:00</td></tr>
+        </table>
+        <p class="hours__note">Cerramos los domingos por la tarde, como manda la tradición del pueblo.</p>
+        <p class="hours__address">📍 Plaça de l'Església, 4 · 08350 Arenys de Mar</p>
+      </div>
+
+      <!--
+        NOTA para el propietario de la web:
+        Aquí puedes sustituir este bloque por un mapa real,
+        por ejemplo un iframe de Google Maps con la dirección exacta.
+      -->
+      <div class="hours__map reveal" aria-hidden="true">
+        <svg viewBox="0 0 300 240">
+          <rect x="0" y="0" width="300" height="240" class="map-bg"/>
+          <path d="M0,60 L300,40" class="map-line"/>
+          <path d="M0,150 L300,170" class="map-line"/>
+          <path d="M80,0 L60,240" class="map-line"/>
+          <path d="M220,0 L240,240" class="map-line"/>
+          <circle cx="150" cy="110" r="8" class="map-pin"/>
+          <path d="M150,118 L150,140" class="map-pin"/>
+        </svg>
+        <p>Mapa de ejemplo — sustituir por embed real</p>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contact">
+      <p class="eyebrow center">Escríbenos</p>
+      <h2 class="center">¿Reservas o dudas?</h2>
+
+      <form id="contactForm" class="contact__form reveal">
+        <label>
+          Nombre
+          <input type="text" name="nombre" required>
+        </label>
+        <label>
+          Correo electrónico
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          Mensaje
+          <textarea name="mensaje" rows="4" required></textarea>
+        </label>
+        <button type="submit" class="btn btn--primary">Enviar mensaje</button>
+        <p class="contact__feedback" id="formFeedback" role="status"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Vintage Café Arenys · Arenys de Mar</p>
+    <p class="footer__social">
+      <a href="#" target="_blank" rel="noopener">Instagram</a> ·
+      <a href="#" target="_blank" rel="noopener">Facebook</a>
+    </p>
+    <p class="footer__legal">&copy; <span id="year"></span> Vintage Café Arenys. Web de demostración.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
